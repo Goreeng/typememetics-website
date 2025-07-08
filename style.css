@@ -1,7 +1,11 @@
-
 :root {
-/* For fonts */
-/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --color-background: #f0f0f0;
+  --color-text: #000000;
+  --color-link: #0000ff;
+  --color-vlink: #800080;
+
+  /* For fonts */
+  /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
   --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
   --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
   --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
@@ -11,8 +15,8 @@
   --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
   --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
 
-/* For spacing */
-/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  /* For spacing */
+  /* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
   --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
   --space-2xs: clamp(0.5625rem, 0.5408rem + 0.1087vw, 0.625rem);
   --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
@@ -37,3 +41,212 @@
   --space-s-l: clamp(1.125rem, 0.6467rem + 2.3913vw, 2.5rem);
 }
 
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-link);
+}
+
+a:visited {
+  color: var(--color-vlink);
+}
+
+.text-step--1 {
+  font-size: var(--step--1);
+}
+
+.text-step-1 {
+  font-size: var(--step-1);
+}
+
+.text-step-3 {
+  font-size: var(--step-3);
+}
+
+.itsmr-logo-nav {
+  width: 150px;
+  border: 0;
+}
+
+.itsmr-logo-header {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.container {
+  display: flex;
+}
+
+.nav-bar {
+  width: 180px;
+  background-color: #c0c0c0;
+  padding: var(--space-s);
+}
+
+.content-area {
+  flex-grow: 1;
+  padding: var(--space-s);
+}
+
+.color-orange {
+  color: #ff8c00;
+}
+
+.color-red {
+  color: red;
+}
+
+.hr {
+  border-top: 1px solid black;
+  margin-top: var(--space-s);
+  margin-bottom: var(--space-s);
+}
+
+.hr-large {
+  border-top: 4px solid black;
+  margin-top: var(--space-l);
+  margin-bottom: var(--space-l);
+}
+
+.center-content {
+  text-align: center;
+}
+
+.personnel-table {
+  border: 1px solid black;
+  width: 100%;
+}
+
+.personnel-header {
+  display: flex;
+  background-color: #c0c0c0;
+  border-bottom: 1px solid black;
+}
+
+.personnel-row {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.personnel-row:last-child {
+  border-bottom: none;
+}
+
+.personnel-cell {
+  padding: var(--space-xs);
+  border-right: 1px solid black;
+  flex: 1;
+}
+
+.personnel-cell:last-child {
+  border-right: none;
+}
+
+.incident-table {
+  border: 1px solid black;
+  width: 100%;
+}
+
+.incident-header {
+  display: flex;
+  background-color: #c0c0c0;
+  border-bottom: 1px solid black;
+}
+
+.incident-row {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.incident-row:last-child {
+  border-bottom: none;
+}
+
+.incident-cell {
+  padding: var(--space-xs);
+  border-right: 1px solid black;
+  flex: 1;
+}
+
+.incident-cell:last-child {
+  border-right: none;
+}
+
+.incident-details-table {
+  border: 1px solid black;
+  width: 100%;
+}
+
+.incident-details-row {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.incident-details-row:last-child {
+  border-bottom: none;
+}
+
+.incident-details-cell-label {
+  padding: var(--space-xs);
+  width: 30%;
+  font-weight: bold;
+  border-right: 1px solid black;
+}
+
+.incident-details-cell-value {
+  padding: var(--space-xs);
+  flex: 1;
+}
+
+.pre-formatted {
+  font-family: monospace;
+  white-space: pre-wrap;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: var(--space-s);
+}
+
+.escape-body {
+  background-color: black;
+  color: red;
+}
+
+.blink-text {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.color-white {
+  color: white;
+}
+
+.communiques-table {
+  border: 1px solid black;
+  background-color: #e8e8e8;
+  width: 100%;
+}
+
+.communique-item {
+  padding: var(--space-s);
+  border-bottom: 1px solid black;
+}
+
+.communique-item:last-child {
+  border-bottom: none;
+}
